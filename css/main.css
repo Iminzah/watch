@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 body {
+  
   background: grey;
   font-family:  Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -15,6 +16,7 @@ body {
 }
 
 .watch-container {
+// padding-top: 400px;
   width: 400px;
   margin: 50px auto;
 }
@@ -75,18 +77,81 @@ body {
     color: #aaa;
     font-weight: 700;
   }
-  watch-face-hand.second {
+  .watch-face-centre {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 120px;
+    left: 121px;
+    border-radius: 100%;
+    background: #fff;
+  }
+.watch-face-centre-inner {
+    position: absolute;
+    z-index: 1;
+    width: 9px;
+    height: 9px;
+    top: 2px;
+    left: 3px;
+    border-radius: 100%;
+    background: red;
+    border: 2px solid #511F52;
+  }
+  watch-face-hands {}
+
+  .watch-face-hand {
+    position: absolute;
+  }
+.watch-face-hand.hour {
+    width: 4px;
+    height: 60px;
+    top: 70px;
+    left: 130px;
+    border-radius: 10px;
+    background: #fff;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: rotate(306deg);
+    transform: rotate(306deg);
+  }
+
+  .watch-face-hand.minute {
+    width: 4px;
+    height: 110px;
+    top: 32px;
+    left: 105px;
+    border-radius: 10px;
+    background: #fff;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+  }
+ 
+.watch-face-hand.second {
     width: 4px;
     height: 105px;
-    top:-38px;
+    top: -38px;
     left: 107px;
     border-radius: 10px;
-    background: #511F52;
+    background: red;
     -webkit-transform-origin: 50% 130px;
     transform-origin: 50% 130px;
     -webkit-transform: rotate(150deg);
     transform: rotate(150deg);
   }
+  .watch-crown {
+  position: relative;
+  z-index: -1;
+  width: 18px;
+  height: 30px;
+  top: -143px;
+  left: 246px;
+  border-radius: 6px;
+  background: #a7a7a7;
+  border-right: 2px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 3px 4px rgba(0, 0, 0,0.05);
+}
 . watch-strap-top {
   position: relative;
   z-index: -1;
@@ -97,6 +162,21 @@ body {
   background: #968;
   border-radius: 10px 10px 0 0;
 }
+.watch-strap-top{
+  position: relative;
+  z-index: -1;
+  width: 125px;
+  height: 150px;
+  left: 65px;
+  bottom: -20px;
+  background: black;
+  border-radius: 0 0 10px 10px;
+  color: black;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 120px;
+  text-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
 
 .watch-strap-bottom {
   position: relative;
@@ -105,7 +185,7 @@ body {
   height: 150px;
   left: 65px;
   bottom: 68px;
-  background: #968;
+  background: black;
   border-radius: 0 0 10px 10px;
   color: rgba(0, 0, 0, 0.2);
   font-weight: 900;
@@ -113,4 +193,5 @@ body {
   padding-top: 120px;
   text-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
 
